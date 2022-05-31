@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+  <link type="text/css" rel="stylesheet" href="./video.js/dist/video-js.min.css" />
+  <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+
+  <style>
+    /* Nav Bar */
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 5px;
+      overflow: hidden;
+      background-color: #000000;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: red;
+    }
+
+    div>z {
+      background-color: rgb(252, 152, 230);
+    }
+
+    /*logo*/
+    imgg {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: -1;
+    }
+
+    img1 {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: -1;
+    }
+
+    /* Image gallery*/
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* box sizing*/
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Add a gray background color with some padding */
+    body {
+      font-family: 'Times New Roman';
+      padding: 10px;
+      background: #adada9;
+    }
+
+    /* Header/Blog Title */
+    .header {
+      padding: 1px;
+      font-size: 25px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      background: #0e52ad;
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {
+      float: left;
+      width: 75%;
+    }
+
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      padding-left: 20px;
+    }
+
+    /* Fake image */
+    .fakeimg {
+      color: antiquewhite;
+      background-color: rgb(178, 168, 168);
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Add a box effect for articles */
+    .box {
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+      margin-top: 25px;
+    }
+
+    .box2 {
+      background-color: rgb(0, 0, 0);
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 2px;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      background: #0e52ad;
+      margin-top: 20px;
+    }
+
+    /*link color*/
+    a:hover {
+      color: rgb(255, 0, 0);
+    }
+
+    /* a:visited
+ {
+  color: rgb(95, 99, 24);
+} */
+    /* For Underlining */
+    .underline {
+      text-decoration: underline;
+    }
+
+    /*Center align CSS*/
+    div1 {
+      margin: 50px 50px;
+    }
+
+    /* Sticky*/
+    div.ul {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+    }
+
+    /* div.rightcolumn {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; 
+} */
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+
+      .leftcolumn,
+      .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    /* p {
+  display: none;
+  background-color: rgb(55, 0, 255);
+  color:rgb(255, 255, 255);
+  padding: 20px;
+} */
+    /* div:hover p {
+  display: block;
+} */
+    .img12 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Dotted Border */
+    p.dotted {
+      border-style: dotted dashed solid double;
+    }
+
+    /*coloured bordeers*/
+    p.one {
+      border-style: solid;
+      border-color: #ff0000;
+      /* red */
+    }
+
+    p.two {
+      border-bottom: solid rgb(34, 0, 253);
+      background-color: lightgrey;
+    }
+
+    p.three {
+      border-bottom: solid rgb(107, 207, 227);
+      background-color: rgb(255, 211, 237);
+    }
+  </style>
+</head>
+
+<body>
+  <imgg src="img_tree.png"></imgg>
+  <div class="header">
+
+    <h1>ARKAY APPS PVT LTD</h1>
+    <!-- <img1 src="arkayapps.jpg"></img1> -->
+
+    <div class="box2" style="color: white;">
+      <h5>TOP ELECTRIC AUTOMOBILES OF 2022</h5>
+    </div>
+  </div>
+
+  <!-- Nav Bar-->
+  <div class="ul">
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="box">
+        <h1><u>
+            <p class="dotted" id="demo" style="text-align:center;">MY ALL BLOGS</p>
+          </u></h1>
+        <h2>
+          <p>The Best Nexon EV MAX </p>
+        </h2>
+
+        <script>
+          function myFunction() {
+            document.getElementById("demo").style.fontSize = "50px";
+            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").style.backgroundColor = "yellow";
+          }
+        </script>
+        <button type="button" onclick="myFunction()">Click Me!</button>
+        <p></p>
+        <div style="height:200px;">
+          <a href="https://www.pluginindia.com/blogs/the-best-nexon-ev-max-features"><img src="./nexonev.jpg" style="width: 30%;height:auto;"></a>
+          <a href="https://www.pluginindia.com/blogs/the-best-nexon-ev-max-features"><img src="./nexon2.jpg" style="width:30%;"></a>
+          <a href="https://www.pluginindia.com/blogs/the-best-nexon-ev-max-features"><img src="./nexon3.jpg" style="width:30%;"></a>
+          <br>
+        </div>
+        <br><br><br><br>
+        <p> The Tata Nexon EV MAX comes in two variants and the car you are seeing is the top of the line “XZ+ LUX” variant. We have been testing this car for some time now and we wanted to showcase some of the best features that the car has to offer!
+        </p>
+      </div>
+
+      <div class="box">
+        <h2>Power <span style="color:blue"> Scooter </span> Buyers Guide | 2022 </h2>
+        <div style="height:200px;">
+          <a href="https://www.pluginindia.com/blogs/power-electric-scooter-buyers-guide-2022"><img src="./scooters.jpg" style="width: 30%"></a>
+          <a href="https://www.pluginindia.com/blogs/power-electric-scooter-buyers-guide-2022"><img src="./scooterspecs.jpg" style="width: 30%"></a><br>
+        </div>
+        <br>
+        <p> We often get so many queries, from all of you about buying a high speed electric scooter. Especially those who want no compromises. Many of want to get an electric scooter that has operations all over India, companies that invest in RnD, companies that offer performance scooters. You have many questions like - which scooter offers the longest range, which scooter offers good quality batteries and so on. In this blog/video we will talk about the performance electric scooters you can buy now in 2022. </p>
+        <h3> Video Exclusive </h3>
+        <p> We talk about the EV community's criticism of Ampere. Despite being a 12 year old company the products dont excite me. They have not done enough to create compelling electric scooters. Watch the video for more</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/F60ZReNGoUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div class="box"><a href="https://www.pluginindia.com/electricvehiclenews/hero-motocorp-ready-for-electric-vehicles">
+          <h2>Hero MotoCorp ready for electric vehicles</h2>
+          <div style="height:200px;">
+            <a href="https://www.pluginindia.com/electricvehiclenews/hero-motocorp-ready-for-electric-vehicles"><img src="./HERO1.jpg" style="width: 30%"></a>
+            <a href="https://www.pluginindia.com/electricvehiclenews/hero-motocorp-ready-for-electric-vehicles"><img src="./hero2.jpeg" style="width: 30%"></a><br>
+          </div>
+          <br><a href="https://www.pluginindia.com/electricvehiclenews/hero-motocorp-ready-for-electric-vehicles">
+            <p> Hero did devote a lot of airtime to EVs during their 10th Hero brand celebration. We had Tarun Mehta and Horace Luke talk as part of the show. And yes, we did have a glimpse of their un-named electric scooter. Seemed to have been a German design - probably with the Munich tech center working on that. Kind of thought that the legroom was on the lower side. Pawan Munjal is saying a lot of things right, but the proof of the pudding is in the eating. Till the time we do not see their vehicles on the roads, we will wait and watch. Market leadership chrome to Hero because of Honda’s technical prowess with engines. The CD 100 and then the Splendor were vehicles with a very affordable total cost of ownership. Hero needs to repeat the same with electric vehicles. Although the question is not so much TCO but getting the power-range-price equation right. They need to come up with a scooter which can deliver 150 km range, a 2 kW motor and a price close to 1 lakh. If they can do that, then they are home. </p>
+          </a></div>
+
+      <div class="box">
+        <h2>Hero MotoCorp ready for electric vehicles</h2>
+        <div style="height:200px;">
+          <a href="https://www.pluginindia.com/electricvehiclenews/hero-motocorp-ready-for-electric-vehicles"><img src="./HERO1.jpg" style="width: 30%"></a>
+          <a href="https://www.pluginindia.com/electricvehiclenews/hero-motocorp-ready-for-electric-vehicles"><img src="./hero2.jpeg" style="width: 30%"></a><br>
+        </div>
+        <br>
+        <p> Hero did devote a lot of airtime to EVs during their 10th Hero brand celebration. We had Tarun Mehta and Horace Luke talk as part of the show. And yes, we did have a glimpse of their un-named electric scooter. Seemed to have been a German design - probably with the Munich tech center working on that. Kind of thought that the legroom was on the lower side. Pawan Munjal is saying a lot of things right, but the proof of the pudding is in the eating. Till the time we do not see their vehicles on the roads, we will wait and watch. Market leadership chrome to Hero because of Honda’s technical prowess with engines. The CD 100 and then the Splendor were vehicles with a very affordable total cost of ownership. Hero needs to repeat the same with electric vehicles. Although the question is not so much TCO but getting the power-range-price equation right. They need to come up with a scooter which can deliver 150 km range, a 2 kW motor and a price close to 1 lakh. If they can do that, then they are home. </p>
+        </a>
+      </div>
+
+      <div class="box">
+        <h2>Power <span style="color:blue"> Scooter </span> Buyers Guide | 2022 </h2>
+        <div style="height:200px;">
+          <a href="https://www.pluginindia.com/blogs/power-electric-scooter-buyers-guide-2022"><img src="./scooters.jpg" style="width: 30%"></a>
+          <a href="https://www.pluginindia.com/blogs/power-electric-scooter-buyers-guide-2022"><img src="./scooterspecs.jpg" style="width: 30%"></a><br>
+        </div>
+        <br>
+        <p> We often get so many queries, from all of you about buying a high speed electric scooter. Especially those who want no compromises. Many of want to get an electric scooter that has operations all over India, companies that invest in RnD, companies that offer performance scooters. You have many questions like - which scooter offers the longest range, which scooter offers good quality batteries and so on. In this blog/video we will talk about the performance electric scooters you can buy now in 2022. </p>
+        <h3> Video Exclusive </h3>
+        <p> We talk about the EV community's criticism of Ampere. Despite being a 12 year old company the products dont excite me. They have not done enough to create compelling electric scooters. Watch the video for more</p>
+        <iframe style="width: 50%;height: 50%;" src="https://www.youtube.com/embed/RdCpqpjJsdk?autoplay=1&mute=1"></iframe>
+      </div>
+
+      <div class="box">
+        <h1>
+          <p class="three" style="text-align: center;">Sample video from video.js with autoplay and muted</p>
+        </h1>
+
+        <video id="my-video" class="video-js" controls autoplay muted preload="auto" width="560" height="315" poster="video_poster.jpg" data-setup='{}'>
+          <source src="MY_VIDEO.mp4">
+        </video>
+
+        <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
+      </div>
+      <div class="box">
+        <div class="box gallery">
+          <a target="_blank" href="img_5terre.jpg">
+            <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+
+        <div class="box gallery">
+          <a target="_blank" href="img_forest.jpg">
+            <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+
+        <div class="box gallery">
+          <a target="_blank" href="img_lights.jpg">
+            <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+
+        <div class="box gallery">
+          <a target="_blank" href="img_mountains.jpg">
+            <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rightcolumn">
+      <div class="box">
+        <h2 style="text-align:center;">Video.js with functions autoplay and muted and loop (og theme)</h2>
+
+        <video id="my-video" class="video-js" controls autoplay muted loop disableremoteplayback preload="auto" style="width: 100%" height="200%" data-setup='{}'>
+          <source src="MY_VIDEO.mp4">
+        </video>
+      </div>
+
+      <div class="box">
+        <h2 style="text-align:center;">Video.js with loop, preload <span style="color:rgb(255, 238, 0)"><br>(fantasy theme)</span></h2>
+
+        <video id="my-video" class="video-js vjs-theme-fantasy" controls loop preload="auto" style="width: 100%" height="150%" poster="https://wallpapercave.com/wp/wp3305861.jpg" data-setup="{}">
+          <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+          <p class="vjs-no-js">
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+      </div>
+
+      <div class="box">
+        <h2 style="text-align:center;">Video.js with loop, preload <span style="color:rgb(107, 22, 22)"><br>(city theme)</span></h2>
+
+        <video id="my-video" class="video-js vjs-theme-city" controls loop preload="auto" style="width: 100%" height="150%" poster="https://wallpapercave.com/wp/wp3305861.jpg" data-setup="{}">
+          <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+          <p class="vjs-no-js">
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+      </div>
+
+      <div class="box">
+        <h2 style="text-align:center;">Video.js with loop, preload <span style="color:blue"><br>(sea theme)</span></h2>
+
+        <video id="my-video" class="video-js vjs-theme-sea" controls loop preload="auto" style="width: 100%" height="150%" poster="https://wallpapercave.com/wp/wp3305861.jpg" data-setup="{}">
+          <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+          <p class="vjs-no-js">
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+      </div>
+
+      <div class="box">
+        <h2 style="text-align:center;">Video.js with loop, preload <span style="color:rgb(0, 255, 85)"><br>(forest theme)</span></h2>
+
+        <video id="my-video" class="video-js vjs-theme-forest" controls loop preload="auto" style="width: 100%" height="150%" poster="https://wallpapercave.com/wp/wp3305861.jpg" data-setup="{}">
+          <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+          <p class="vjs-no-js">
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+      </div>
+
+      <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
+    </div>
+
+    <div class="rightcolumn">
+      <div class="box">
+        <h1>
+          <p class="three" style="text-align: center;">About Me</p>
+        </h1>
+        <p><strong><u>Kevin Soni</u></strong></p>
+        <p>Frontend Developer</p>
+        <p>Arkay Apps</p>
+      </div>
+
+      <div class="box">
+        <h1><u>Popular Bikes</u></h1>
+        <ul>
+          <li><img src="./pp1.png" width="280" height="70"></li>
+          <li><img src="./pp2.jpg" width="250" height="70"></li>
+          <li><img src="./pp3.jpg" width="280" height="90"></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h1>
+          <p class="two" style="text-align: center;">Follow Me</p>
+        </h1>
+        <p><b><u>Instagram</u></b> : @Topcars2022</p>
+        <p><b><u>Twitter</u></b> : @Topcars2022</p>
+        <p><b><u>Blog</u></b> : <a href="https://www.arkayapps.com/blogs"> Arkay apps </a></p>
+      </div>
+
+      <div class="box">
+        <div1><button type="button" onclick="document.getElementById('clock').innerHTML = Date()">
+            Click me to display Date and Time.</div1></button>
+        <p id="clock"></p>
+      </div>
+
+      <div class="box">
+        <h2>
+          <p class="one" style="text-align: center;">Subscribe to our Newsletter</p>
+        </h2>
+
+        <form action="/action_page.php" target="_blank">
+          <label for="username">Name:</label><br>
+          <input type="text" id="username" name="username" placeholder="Kevin"><br>
+          <label for="Email">Email:</label><br>
+          <input type="email" id="Email" name="Email" placeholder="kevinsoni@gmail.com"><br>
+          <label for="pin">Set Your 4 Digit PIN:</label><br>
+          <input type="text" id="pin" name="pin" maxlength="4" size="4" placeholder="1234"><br>
+          <label for="phone">Enter a phone number:</label><br>
+          <input type="tel" id="phone" name="phone" placeholder="9876543210" value="+91" maxlength="13"><br><br><br>
+
+          <label for="username">** Disabled value: **</label><br>
+          <input type="text" id="username" name="username" value="Cannot Click the box" disabled><br><br><br>
+          <input type="submit" value="Submit">
+          <input type="reset">
+        </form>
+        <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+      </div>
+
+      <div class="box">
+        <p><b>Choose your favorite Web language:</b></p>
+        <form>
+          <input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">HTML</label><br>
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">CSS</label><br>
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">JavaScript</label>
+          <p><input type="submit" value="Submit"> <input type="reset"></p>
+        </form>
+      </div>
+
+      <div class="box">
+        <p><strong>Enter Your Birthday</strong></p>
+
+        <form action="/action_page.php">
+          <label for="birthday">Birthday:</label>
+          <input type="date" id="birthday" name="birthday">
+        </form><br>
+        <input type="button" onclick="alert('Happy Birthday!!')" value="Click me i will wish you Happy Birthday">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="footer">
+    <h4>© COPYRIGHT 2022. ALL RIGHTS RESERVED.</h4>
+    <p>
+    <h4>ARKAY APPS PVT LTD</h4>
+    </p>
+  </div>
+
+</body>
+</html>

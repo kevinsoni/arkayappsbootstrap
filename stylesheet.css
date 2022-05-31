@@ -1,0 +1,452 @@
+
+#home {
+  width: 46px;
+  height: 44px;
+  background: url(img_navsprites.gif) 0 0;
+}
+
+.dropbtn {
+    background-color: #ff0798;
+    color: white;
+    padding: 17px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #faf600;
+    min-width: 108px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  
+  }
+  
+  .dropdown-contentt {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    z-index: 1;
+  
+  }
+  .dropdown-contentt a {
+    position:relative;
+    font-size: 16px;
+    color: black;
+    display: block;
+    padding: 12px 16px;
+    background-color: #e8ff83;
+    left:110px;
+    top:-42px
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  .dropdown-contentt a:hover {background-color: #f1f1f1}
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-contentt {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #0e52ad;
+  }
+
+  /* image auto */
+  /* img {
+    max-width: 100%;
+    height: auto;
+  } */
+
+  .imgcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+
+/* image */
+#example2 {
+    
+    border: 0px solid black;
+    background: url(./arkayappss.png) center no-repeat;
+    background-repeat: no-repeat;
+    right: 0px;
+    top: 10px;
+    padding: 38px ;
+    position: relative;
+    background-size: 100px, 100px, auto;
+
+  }
+
+  /* Search bar*/
+  input[type=text] {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 6px 10px 6px 20px;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 100%;
+  }
+
+
+/* Nav bar 1*/
+.nav {
+  background-color: rgb(255, 159, 231); 
+  list-style-type: none;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+}
+
+    /* Nav Bar 
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 5px;
+      overflow: hidden;
+      background-color: #000000;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: red;
+    }
+*/
+
+    .f::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+    
+    div>z {
+      background-color: rgb(252, 152, 230);
+    }
+
+    /*Clearfix*/
+    .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+    /* logo
+    imgg {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: -1;
+    } */
+
+    img1 {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: -1;
+    }
+
+    /* Image gallery*/
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* box sizing*/
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Add a gray background color with some padding */
+    body {
+      font-family: 'Times New Roman';
+      padding: 10px;
+      background: #adada9;
+    }
+
+    /* Header/Blog Title */
+    .header {
+      padding: 1px;
+      font-size: 25px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      background: #0e52ad;
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {
+      float: left;
+      width: 75%;
+    }
+
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      padding-left: 20px;
+    }
+
+    /* Fake image */
+    .fakeimg {
+      color: antiquewhite;
+      background-color: rgb(178, 168, 168);
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Add a box effect for articles */
+    .box {
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+      margin-top: 25px;
+    }
+
+    .box2 {
+      background-color: rgb(0, 0, 0);
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 2px;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      background: #0e52ad;
+      margin-top: 20px;
+    }
+
+    /*link color*/
+    a:hover {
+      color: rgb(255, 0, 0);
+    }
+
+    /* a:visited
+ {
+  color: rgb(95, 99, 24);
+} */
+    /* For Underlining */
+    .underline {
+      text-decoration: underline;
+    }
+
+    /*Center align CSS*/
+    .div1 {
+      margin: 50px 50px;
+    }
+
+    /* Sticky*/
+    div.nav {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+    }
+
+    /* div.rightcolumn {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; 
+} */
+
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+
+      .leftcolumn,
+      .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    /* p {
+  display: none;
+  background-color: rgb(55, 0, 255);
+  color:rgb(255, 255, 255);
+  padding: 20px;
+} */
+    /* div:hover p {
+  display: block;
+} */
+    .img12 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Dotted Border */
+    p.dotted {
+      border-style: dotted dashed solid double;
+    }
+
+    /*coloured bordeers*/
+    p.one {
+      border-style: solid;
+      border-color: #ff0000;
+      /* red */
+    }
+
+    p.two {
+      border-bottom: solid rgb(34, 0, 253);
+      background-color: lightgrey;
+    }
+
+    p.three {
+      border-bottom: solid rgb(107, 207, 227);
+      background-color: rgb(255, 211, 237);
+    }
+
+    /* Rotate */ 
+    /* .rotate {
+        width: 200px;
+        height: 200px;
+        background: red;
+        transition: width 2s, height 2s, transform 2s;
+        margin: 40px 40px;
+
+      }
+      
+      .rotate:hover {
+        width: 300px;
+        height: 300px;
+        transform: rotate(360deg);
+      } */
+
+      /* Header Reflection */
+      .imgreflection {
+        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+      }
+
+      * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
